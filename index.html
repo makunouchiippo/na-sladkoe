@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>НА СЛАДКОЕ. — торты и капкейки на заказ в Москве</title>
+<meta name="description" content="Домашние торты, бенто и капкейки на заказ в Москве. Классика от 2000 ₽/кг, премиум 2600 ₽/кг, капкейки от 1650 ₽. Самовывоз м. Варшавская или доставка. Заказ за 3 дня.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="НА СЛАДКОЕ. — торты и капкейки на заказ">
+<meta property="og:description" content="Торты, бенто и капкейки на заказ в Москве. Самовывоз м. Варшавская или доставка.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="favicon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"НА СЛАДКОЕ.","description":"Торты, бенто и капкейки на заказ","telephone":"+79933506298","address":{"@type":"PostalAddress","addressLocality":"Москва","addressCountry":"RU"},"areaServed":"Москва","priceRange":"₽₽"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fira+Sans+Extra+Condensed:wght@900&family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7EEE7; --bg2:#EFE3D9; --card:#FFFBF7; --ink:#111111; --txt:#2B2622; --mut:#6B625A;
+  --pink:#E91E70; --dot:#FA95B4; --plaque:#F2A3C0; --plink:#7A0D3D; --line:rgba(17,17,17,.14);
+  --logo:'Fira Sans Extra Condensed','Oswald',Impact,sans-serif;
+  --osw:'Oswald','Arial Narrow',sans-serif;
+  --hand:'Caveat','Segoe Script',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.5;
+  padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(247,238,231,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  margin:0 calc(-1*max(16px,env(safe-area-inset-right,0px))) 0 calc(-1*max(16px,env(safe-area-inset-left,0px)));
+  padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:56px}
+.brand{font-family:var(--logo);font-weight:900;font-size:22px;color:var(--ink);letter-spacing:.2px;white-space:nowrap;line-height:1}
+.brand i{color:var(--dot);font-style:normal}
+.links{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.links::-webkit-scrollbar{display:none}
+.links button{font-family:var(--osw);font-weight:500;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut);padding:8px 10px;white-space:nowrap;border-radius:4px}
+.links button:hover{color:var(--ink)}
+.cta{font-family:var(--osw);font-weight:600;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.cta:hover{background:var(--pink)}
+:focus-visible{outline:2px solid var(--pink);outline-offset:2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:56px 0 64px}
+.hero .logo{width:min(460px,100%)}
+.sub{font-family:var(--osw);font-weight:500;font-size:20px;letter-spacing:7px;color:#222;line-height:1.6;margin-top:28px;text-transform:uppercase}
+.tag{display:inline-block;background:var(--plaque);color:var(--plink);font-family:var(--osw);font-weight:600;letter-spacing:6px;text-transform:uppercase;padding:4px 12px;font-size:16px}
+.hero .tag{margin-top:10px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{font-family:var(--osw);font-weight:600;font-size:15px;letter-spacing:3px;text-transform:uppercase;padding:14px 26px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--pink)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.stack{position:relative;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center}
+.stack img{position:absolute;border:8px solid #fff;box-shadow:0 14px 34px rgba(60,40,25,.18);object-fit:cover}
+.stack img:nth-child(1){width:62%;aspect-ratio:1/1;left:0;top:4%;transform:rotate(-5deg)}
+.stack img:nth-child(2){width:58%;aspect-ratio:1/1;right:0;bottom:2%;transform:rotate(4deg)}
+.note{font-family:var(--hand);font-weight:700;color:var(--pink);line-height:.95}
+.stack .note{position:absolute;right:2%;top:6%;font-size:34px;transform:rotate(-6deg);text-align:left}
+.note u{text-decoration:none;border-bottom:3px solid var(--pink)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.eyebrow{font-family:var(--hand);font-weight:700;color:var(--pink);font-size:30px;line-height:1;transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
+h2{font-family:var(--logo);font-weight:900;font-size:clamp(46px,8vw,84px);line-height:.88;text-transform:uppercase;color:var(--ink);letter-spacing:-.5px}
+.price{text-align:right;font-family:var(--osw);letter-spacing:3px;color:var(--mut);font-size:15px;text-transform:uppercase;white-space:nowrap}
+.price b{font-family:var(--logo);font-weight:900;font-size:54px;line-height:.9;color:var(--ink);letter-spacing:0;margin-right:6px}
+h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-transform:uppercase;color:var(--ink)}
+.lbl{font-family:var(--osw);font-weight:600;font-size:13px;letter-spacing:3.5px;text-transform:uppercase;color:var(--ink)}
+.hand{font-family:var(--hand);font-weight:700;color:var(--pink);font-size:23px;line-height:1.05}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:var(--card);border-radius:14px;padding:20px 18px}
+.step .n{font-family:var(--logo);font-weight:900;font-size:52px;line-height:.9;color:var(--dot)}
+.step .lbl{display:block;margin:10px 0 6px}
+.step p{font-size:15px;color:var(--txt)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.fact{background:var(--plaque);color:var(--plink);border-radius:14px;padding:16px 18px}
+.fact .lbl{color:var(--plink);display:block;margin-bottom:2px}
+.fact p{font-size:15px;font-weight:500}
+.sizes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.size{border:1.5px solid var(--ink);border-radius:14px;padding:16px 18px}
+.size p{font-size:15px;margin-top:4px}
+
+/* flavours */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{aspect-ratio:4/3;background:var(--bg2);overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card p{font-size:15px;color:var(--txt)}
+.card .hand{margin-top:auto;padding-top:4px}
+.fix{font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:2px;background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;vertical-align:middle;margin-left:6px;white-space:nowrap}
+.sub2{margin-top:44px}
+.allerg{margin-top:18px;font-size:14px;color:var(--mut)}
+.allerg .lbl{color:var(--mut);margin-right:8px;font-size:12px}
+
+/* calc */
+.calc{margin-top:44px;background:var(--ink);color:#fff;border-radius:20px;padding:26px;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
+.calc h3{color:#fff;font-size:36px}
+.calc .row{margin-top:18px}
+.calc .lbl{color:#CFC6BE;display:block;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+.chips button[aria-pressed=true]{background:var(--plaque);color:var(--plink);box-shadow:none}
+.calc input[type=range]{width:100%;accent-color:var(--dot);height:28px}
+.calc .w{display:flex;justify-content:space-between;font-size:14px;color:#CFC6BE}
+.calc .w b{color:#fff;font-size:16px;font-variant-numeric:tabular-nums}
+.sum{text-align:center;background:#1E1B19;border-radius:16px;padding:22px 14px}
+.sum .big{font-family:var(--logo);font-weight:900;font-size:64px;line-height:1;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sum .hand{color:var(--dot);margin-top:6px}
+.sum small{display:block;font-size:13px;color:#CFC6BE;margin-top:10px;line-height:1.4}
+
+/* cupcakes */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cup .phs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--card)}
+.cup .phs div{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--bg2)}
+.cup .phs img{width:100%;height:100%;object-fit:cover}
+.cup .phs span{position:absolute;left:8px;bottom:8px;font-family:var(--osw);font-weight:600;font-size:11px;letter-spacing:2.5px;background:#fff;color:var(--ink);padding:2px 7px;border-radius:3px}
+.prices{text-align:right;font-family:var(--osw);letter-spacing:2px;color:var(--mut);font-size:15px;text-transform:uppercase;line-height:1.3}
+.prices b{font-family:var(--logo);font-weight:900;font-size:36px;color:var(--ink);letter-spacing:0;margin-left:8px}
+
+/* decor */
+.dec{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.drow{background:var(--card);border-radius:16px;display:grid;grid-template-columns:132px 1fr;gap:16px;padding:14px;align-items:center}
+.drow img{width:132px;height:132px;object-fit:cover;border-radius:10px}
+.drow .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.drow .pr{font-family:var(--osw);font-weight:600;font-size:16px;letter-spacing:1.5px;color:var(--plink);background:var(--plaque);padding:2px 9px;border-radius:4px;white-space:nowrap}
+.drow p{font-size:14.5px;margin:6px 0 4px}
+.drow .hand{font-size:21px}
+.extra{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.extra div{border:1.5px solid var(--ink);border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.extra b{font-family:var(--logo);font-weight:900;font-size:30px;color:var(--ink)}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.works img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:var(--bg2)}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:1fr;gap:18px}
+.cc{background:var(--card);border-radius:16px;padding:22px}
+.cc .num{font-family:var(--logo);font-weight:900;font-size:clamp(34px,6vw,48px);line-height:1;color:var(--ink);margin:8px 0 14px;user-select:all;-webkit-user-select:all;white-space:nowrap}
+.cc .acts{display:flex;gap:10px;flex-wrap:wrap}
+.cc .btn{font-size:13px;padding:11px 18px}
+.cc p{font-size:15px;margin-top:8px}
+footer{border-top:1px solid var(--line);padding:36px 0 48px;text-align:center}
+footer .note{font-size:38px;display:inline-block;transform:rotate(-3deg)}
+footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding:36px 0 44px;gap:28px}
+  .steps{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .calc{grid-template-columns:1fr}
+  .dec{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  section{padding:40px 0}
+  .nav .wrap{gap:10px}
+  .brand{font-size:19px}
+  .sub{font-size:16px;letter-spacing:5px}
+  .hero .logo{width:78%}
+  .stack{max-width:340px}
+  .stack .note{font-size:27px}
+  .facts,.sizes,.grid2,.contacts,.extra{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .card .ph{aspect-ratio:3/2}
+  .price b{font-size:44px}
+  .calc{padding:20px 16px;border-radius:16px}
+  .sum .big{font-size:54px}
+  .drow{grid-template-columns:96px 1fr;gap:12px}
+  .drow img{width:96px;height:96px}
+  .works{gap:6px}
+  .works img{border-radius:8px}
+  .btn{padding:13px 20px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<div class="nav"><div class="wrap">
+  <div class="brand">НА СЛАДКОЕ<i>.</i></div>
+  <div class="links">
+    <button data-go="how">Как заказать</button>
+    <button data-go="cakes">Начинки</button>
+    <button data-go="cups">Капкейки</button>
+    <button data-go="decor">Декор</button>
+    <button data-go="works">Работы</button>
+  </div>
+  <button class="cta" data-go="contacts">Заказать</button>
+</div></div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div>
+    <img class="logo" src="img/logo.png" alt="НА СЛАДКОЕ." width="636" height="399">
+    <h1 class="sub">Торты и капкейки<br>на заказ</h1>
+    <span class="tag">Москва</span>
+    <div class="btns">
+      <button class="btn" data-go="cakes">Выбрать начинку</button>
+      <button class="btn ghost" data-go="contacts">Написать</button>
+    </div>
+  </div>
+  <div class="stack">
+    <img src="img/w7.jpg" alt="Шоколадный торт с подтёками">
+    <img src="img/w4.jpg" alt="Жёлтый бенто-торт с рюшами">
+    <div class="note">калории<br><u>не усваиваются</u></div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="head"><div><span class="eyebrow">сначала вкус. потом красота</span><h2>Как заказать</h2></div></div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><span class="lbl">Начинка</span><p>Выбери: классика или премиум</p></div>
+    <div class="step"><div class="n">2</div><span class="lbl">Размер</span><p>Определись с весом: примерно 150–200 г на человека</p></div>
+    <div class="step"><div class="n">3</div><span class="lbl">Дизайн</span><p>Пришли референс или идею — придумаем вместе</p></div>
+    <div class="step"><div class="n">4</div><span class="lbl">Бронь</span><p>Внеси предоплату 50% — и дата за тобой</p></div>
+  </div>
+  <div class="facts">
+    <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
+    <div class="fact"><span class="lbl">Предоплата</span><p>50% — и дата за тобой</p></div>
+    <div class="fact"><span class="lbl">Получение</span><p>самовывоз м. Варшавская или доставка</p></div>
+  </div>
+  <div class="sizes">
+    <div class="size"><span class="lbl">Бенто</span><p>Маленький торт на 2–3 человека, примерно 500 г</p></div>
+    <div class="size"><span class="lbl">Торт</span><p>От 1,5 кг — любой размер под количество гостей</p></div>
+  </div>
+</section>
+
+<section id="cakes">
+  <div class="head">
+    <div><span class="eyebrow">та, которую хочется доесть ложкой</span><h2>Классика</h2></div>
+    <div class="price"><b>2000 ₽</b>/ кг</div>
+  </div>
+  <div class="grid3">
+    <article class="card"><div class="ph"><img loading="lazy" src="img/rv.jpg" alt="Красный бархат в разрезе"></div><div class="tx"><h3>Красный бархат</h3><p>Бархатные коржи на кефире, крем-чиз с лимоном, вишнёвое компоте</p><div class="hand">бархатный сезон открыт</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/choc.jpg" alt="Шоколадный торт в разрезе"></div><div class="tx"><h3>Шоколадный</h3><p>Влажный шоколадный бисквит, шоколадный крем-чиз</p><div class="hand">шоколада много не бывает</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/snickers.jpg" alt="Торт Snickers в разрезе"></div><div class="tx"><h3>Snickers</h3><p>Шоколадный бисквит, крем-чиз с варёной сгущёнкой, солёная карамель с арахисом</p><div class="hand">орехи — это тоже белок</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/honey.jpg" alt="Медовик в разрезе"></div><div class="tx"><h3>Медовик</h3><p>Тонкие медовые коржи, нежный сметанный крем</p><div class="hand">как у бабушки, только лучше</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/lemon.jpg" alt="Лимонный торт в разрезе"></div><div class="tx"><h3>Лимонный</h3><p>Лимонные коржи, прослойка лимонного курда, крем-чиз с курдом</p><div class="hand">кисленький, но в хорошем смысле</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/berry.jpg" alt="Ягодный торт в разрезе"></div><div class="tx"><h3>Ягодный</h3><p>Ванильные коржи на кефире, ягодный крем-чиз, ягодное желе</p><div class="hand">клубника / малина / вишня</div></div></article>
+  </div>
+
+  <div class="head sub2">
+    <div><span class="eyebrow">когда хочется не просто торт</span><h2>Премиум</h2></div>
+    <div class="price"><b>2600 ₽</b>/ кг</div>
+  </div>
+  <div class="grid3">
+    <article class="card"><div class="ph"><img loading="lazy" src="img/pist.jpg" alt="Торт фисташка–малина в разрезе"></div><div class="tx"><h3>Фисташка–малина</h3><p>Лимонные коржи с малиной, малиновый компот, фисташковый крем-чиз</p><div class="hand">самая «дорогая» на вкус</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/kinder.jpg" alt="Торт киндер кантри в разрезе"></div><div class="tx"><h3>Киндер кантри</h3><p>Шоколадный бисквит, взбитый ганаш с хрустящей пшеницей, молочный шоколад</p><div class="hand">вкус из детства</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/mousse.jpg" alt="Муссовый торт в разрезе"></div><div class="tx"><h3>Муссовый <span class="fix">3000 ₽</span></h3><p>Ягодный мусс, ягодная прослойка, лимонно-миндальный бисквит, зеркальная глазурь</p><div class="hand">клубника / малина / манго–маракуйя · ≈1,4 кг</div></div></article>
+  </div>
+  <p class="allerg"><span class="lbl">Аллергены</span>во всех: глютен, яйца, молоко · Snickers: арахис · медовик: мёд · фисташка–малина и муссовый: фисташка, миндаль · киндер: соя</p>
+
+  <div class="calc" id="calc">
+    <div>
+      <h3>Сколько выйдет</h3>
+      <div class="row"><span class="lbl">Начинка</span>
+        <div class="chips" id="cFill">
+          <button data-v="2000" aria-pressed="true">Классика</button>
+          <button data-v="2600" aria-pressed="false">Премиум</button>
+        </div>
+      </div>
+      <div class="row"><span class="lbl">Вес торта</span>
+        <input type="range" id="cW" min="1.5" max="5" step="0.5" value="2" aria-label="Вес торта, кг">
+        <div class="w"><b id="cWv">2 кг</b><span id="cG">на 10–13 гостей</span></div>
+      </div>
+      <div class="row"><span class="lbl">Декор</span>
+        <div class="chips" id="cDec">
+          <button data-v="0" aria-pressed="true">Базовый</button>
+          <button data-v="600" aria-pressed="false">Средний</button>
+          <button data-v="1400" aria-pressed="false">Сложный</button>
+        </div>
+      </div>
+      <div class="row"><span class="lbl">Добавить</span>
+        <div class="chips" id="cAdd">
+          <button data-v="300" aria-pressed="false">Надпись</button>
+          <button data-v="300" aria-pressed="false">Фотопечать</button>
+          <button data-v="700" aria-pressed="false">Сжигаемый верх</button>
+        </div>
+      </div>
+    </div>
+    <div class="sum">
+      <div class="lbl">Примерно</div>
+      <div class="big" id="cSum">4 000 ₽</div>
+      <div class="hand" id="cPre">предоплата 2 000 ₽</div>
+      <small>Точную сумму назову после того, как обсудим дизайн.</small>
+    </div>
+  </div>
+</section>
+
+<section id="cups">
+  <div class="head">
+    <div><span class="eyebrow">маленькие, но с начинкой</span><h2>Капкейки</h2></div>
+    <div class="prices">6 шт<b>1650 ₽</b><br>12 шт<b>2900 ₽</b></div>
+  </div>
+  <div class="grid2">
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_car.jpg" alt="Карамельные капкейки"></div><div><img loading="lazy" src="img/cup_car_in.jpg" alt="Карамельный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Карамельные</h3><p>Карамельный бисквит, солёная карамель внутри, крем-чиз с карамелью</p><div class="hand">тройная карамель</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_ber.jpg" alt="Ягодный капкейк"></div><div><img loading="lazy" src="img/cup_ber_in.jpg" alt="Ягодный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Ягодные</h3><p>Ванильный бисквит, ягодная начинка внутри, ванильный крем-чиз</p><div class="hand">клубника / малина / вишня</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_lem.jpg" alt="Лимонные капкейки"></div><div><img loading="lazy" src="img/cup_lem_in.jpg" alt="Лимонный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Лимонные</h3><p>Лимонный бисквит, курд внутри, крем-чиз с лимонным курдом</p><div class="hand">кислинка в каждом укусе</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_rv.jpg" alt="Капкейки красный бархат"></div><div><img loading="lazy" src="img/cup_rv_in.jpg" alt="Капкейк красный бархат в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Красный бархат</h3><p>Бархатный бисквит, вишнёвый компот внутри, крем-чиз</p><div class="hand">с вишней</div></div></article>
+  </div>
+  <p class="allerg">Цена одна для всех вкусов.</p>
+</section>
+
+<section id="decor">
+  <div class="head"><div><span class="eyebrow">любая идея станет тортом</span><h2>Декор</h2></div></div>
+  <div class="dec">
+    <div class="drow"><img loading="lazy" src="img/dec1.jpg" alt="Торт с базовым декором"><div><div class="top"><h3>Базовый</h3><span class="pr">в цене</span></div><p>Ровное кремовое покрытие, цвет на выбор, мелкий кремовый декор или ягоды</p><div class="hand">уже включён в цену торта</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec2.jpg" alt="Бенто-торт с рюшами"><div><div class="top"><h3>Средний</h3><span class="pr">+600 ₽</span></div><p>Кремовые рюши и бортики, бантики, жемчуг, ракушки, шоколадные элементы</p><div class="hand">когда нужен характер</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec3.jpg" alt="Тематический торт"><div><div class="top"><h3>Сложный</h3><span class="pr">от +1400 ₽</span></div><p>Тематический торт по референсу: фигурки, топперы, много ручной работы</p><div class="hand">пришли идею — посчитаю точно</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec4.jpg" alt="Сжигаемый торт"><div><div class="top"><h3>Сжигаемый торт</h3><span class="pr">+700 ₽</span></div><p>Верхняя картинка сгорает, а под ней — вторая надпись или фото</p><div class="hand">старое — в огонь</div></div></div>
+  </div>
+  <div class="extra">
+    <div><span class="lbl">Надпись</span><b>+300 ₽</b></div>
+    <div><span class="lbl">Фотопечать</span><b>+300 ₽</b></div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="head"><div><span class="eyebrow">следующий — твой</span><h2>Уже делали</h2></div></div>
+  <div class="works">
+    <img loading="lazy" src="img/w1.jpg" alt="Торт Ferrari">
+    <img loading="lazy" src="img/w7.jpg" alt="Шоколадный торт с цифрой 48">
+    <img loading="lazy" src="img/w3.jpg" alt="Морской торт">
+    <img loading="lazy" src="img/w8.jpg" alt="Красный муссовый торт с зеркальной глазурью">
+    <img loading="lazy" src="img/w5.jpg" alt="Торт для бегуна">
+    <img loading="lazy" src="img/w9.jpg" alt="Красный бархат с малиной">
+    <img loading="lazy" src="img/w6.jpg" alt="Торт Наруто">
+    <img loading="lazy" src="img/w4.jpg" alt="Жёлтый бенто-торт">
+    <img loading="lazy" src="img/w2.jpg" alt="Розовый сжигаемый бенто-торт">
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="head"><div><span class="eyebrow">пиши — обсудим</span><h2>Ну что,<br>на сладкое?</h2></div></div>
+  <div class="contacts">
+    <div class="cc">
+      <span class="lbl">Телефон · WhatsApp · Telegram</span>
+      <div class="num" id="phone">+7 993 350-62-98</div>
+      <div class="acts">
+        <a class="btn" href="https://wa.me/79933506298" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://t.me/+79933506298" target="_blank" rel="noopener">Telegram</a>
+        <button class="btn ghost" id="copy">Скопировать номер</button>
+      </div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
+    <div class="fact"><span class="lbl">Предоплата</span><p>50% — и дата за тобой</p></div>
+    <div class="fact"><span class="lbl">Получение</span><p>самовывоз м. Варшавская или доставка</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="note">калории не усваиваются*</div>
+  <small>*но это не точно</small>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.dataset.go); if(!el) return;
+      var y=el.getBoundingClientRect().top+window.pageYOffset-56;
+      window.scrollTo({top:y,behavior:'smooth'});
+    });
+  });
+  var fmt=function(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽'};
+  var one=function(id){
+    var box=document.getElementById(id);
+    box.addEventListener('click',function(e){
+      var t=e.target.closest('button'); if(!t) return;
+      box.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+      calc();
+    });
+  };
+  one('cFill'); one('cDec');
+  document.getElementById('cAdd').addEventListener('click',function(e){
+    var t=e.target.closest('button'); if(!t) return;
+    t.setAttribute('aria-pressed',t.getAttribute('aria-pressed')!=='true'); calc();
+  });
+  var w=document.getElementById('cW'); w.addEventListener('input',calc);
+  function val(id){var s=0;document.querySelectorAll('#'+id+' [aria-pressed=true]').forEach(function(x){s+=+x.dataset.v});return s}
+  function calc(){
+    var kg=+w.value, total=kg*val('cFill')+val('cDec')+val('cAdd');
+    document.getElementById('cWv').textContent=String(kg).replace('.',',')+' кг';
+    document.getElementById('cG').textContent='на '+Math.round(kg/0.2)+'–'+Math.round(kg/0.15)+' гостей';
+    var hard=document.querySelector('#cDec [data-v="1400"]').getAttribute('aria-pressed')==='true';
+    document.getElementById('cSum').textContent=(hard?'от ':'')+fmt(total);
+    document.getElementById('cPre').textContent='предоплата '+fmt(total/2);
+  }
+  calc();
+  var cp=document.getElementById('copy');
+  cp.addEventListener('click',function(){
+    var done=function(){cp.textContent='Скопировано';setTimeout(function(){cp.textContent='Скопировать номер'},1800)};
+    try{navigator.clipboard.writeText('+79933506298').then(done,sel)}catch(e){sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Номер выделен'}
+  });
+})();
+</script>
+
+</body>
+</html>
