@@ -8,7 +8,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="НА СЛАДКОЕ. — торты и капкейки на заказ">
 <meta property="og:description" content="Торты, бенто и капкейки на заказ в Москве. Самовывоз м. Варшавская или доставка.">
-<meta property="og:image" content="og.jpg">
+<meta property="og:image" content="img/og.jpg">
 <meta property="og:locale" content="ru_RU">
 <link rel="icon" href="favicon.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"НА СЛАДКОЕ.","description":"Торты, бенто и капкейки на заказ","telephone":"+79933506298","address":{"@type":"PostalAddress","addressLocality":"Москва","addressCountry":"RU"},"areaServed":"Москва","priceRange":"₽₽"}</script>
@@ -35,7 +35,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
   margin:0 calc(-1*max(16px,env(safe-area-inset-right,0px))) 0 calc(-1*max(16px,env(safe-area-inset-left,0px)));
   padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:18px;height:56px}
-.brand{font-family:var(--logo);font-weight:900;font-size:22px;color:var(--ink);letter-spacing:.2px;white-space:nowrap;line-height:1}
+.brand{text-decoration:none;cursor:pointer;font-family:var(--logo);font-weight:900;font-size:22px;color:var(--ink);letter-spacing:.2px;white-space:nowrap;line-height:1}
 .brand i{color:var(--dot);font-style:normal}
 .links{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .links::-webkit-scrollbar{display:none}
@@ -58,8 +58,8 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 .btn.ghost:hover{background:var(--ink);color:#fff}
 .stack{position:relative;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center}
 .stack img{position:absolute;border:8px solid #fff;box-shadow:0 14px 34px rgba(60,40,25,.18);object-fit:cover}
-.stack img:nth-child(1){width:62%;aspect-ratio:1/1;left:0;top:4%;transform:rotate(-5deg)}
-.stack img:nth-child(2){width:58%;aspect-ratio:1/1;right:0;bottom:2%;transform:rotate(4deg)}
+.stack img:nth-child(1){width:56%;aspect-ratio:4/5;left:0;top:4%;transform:rotate(-5deg)}
+.stack img:nth-child(2){width:54%;aspect-ratio:4/5;right:0;bottom:2%;transform:rotate(4deg)}
 .note{font-family:var(--hand);font-weight:700;color:var(--pink);line-height:.95}
 .stack .note{position:absolute;right:2%;top:6%;font-size:34px;transform:rotate(-6deg);text-align:left}
 .note u{text-decoration:none;border-bottom:3px solid var(--pink)}
@@ -70,6 +70,7 @@ section{padding:56px 0;border-top:1px solid var(--line)}
 .eyebrow{font-family:var(--hand);font-weight:700;color:var(--pink);font-size:30px;line-height:1;transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
 h2{font-family:var(--logo);font-weight:900;font-size:clamp(46px,8vw,84px);line-height:.88;text-transform:uppercase;color:var(--ink);letter-spacing:-.5px}
 .price{text-align:right;font-family:var(--osw);letter-spacing:3px;color:var(--mut);font-size:15px;text-transform:uppercase;white-space:nowrap}
+.price small{display:block;font-size:12px;letter-spacing:1.5px;margin-top:6px;white-space:normal;line-height:1.2}
 .price b{font-family:var(--logo);font-weight:900;font-size:54px;line-height:.9;color:var(--ink);letter-spacing:0;margin-right:6px}
 h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-transform:uppercase;color:var(--ink)}
 .lbl{font-family:var(--osw);font-weight:600;font-size:13px;letter-spacing:3.5px;text-transform:uppercase;color:var(--ink)}
@@ -90,6 +91,14 @@ h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-t
 .size p{font-size:15px;margin-top:4px}
 
 /* flavours */
+@media(min-width:761px){.grid3.two{grid-template-columns:repeat(2,1fr)}.grid3.two .ph{aspect-ratio:16/9}}
+.grid1{display:grid;grid-template-columns:1fr;gap:18px}
+.card.wide{display:grid;grid-template-columns:1fr 1.1fr;align-items:stretch}
+.card.wide .ph{aspect-ratio:auto;height:300px}
+.head2{margin-top:56px}
+.card.wide .tx{align-self:center;padding:22px 26px}
+.card.wide .mt{font-weight:600;color:var(--ink)}
+@media(max-width:760px){.card.wide{grid-template-columns:1fr}.card.wide .ph{aspect-ratio:3/2;height:auto}}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
 .card .ph{aspect-ratio:4/3;background:var(--bg2);overflow:hidden}
@@ -100,6 +109,7 @@ h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-t
 .fix{font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:2px;background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;vertical-align:middle;margin-left:6px;white-space:nowrap}
 .sub2{margin-top:44px}
 .allerg{margin-top:18px;font-size:14px;color:var(--mut)}
+.al .lbl{display:block;margin:0 0 6px;text-transform:uppercase;letter-spacing:.08em}.al ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}.al b{color:var(--ink);font-weight:700;margin-right:8px}
 .allerg .lbl{color:var(--mut);margin-right:8px;font-size:12px}
 
 /* calc */
@@ -141,7 +151,8 @@ h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-t
 
 /* works */
 .works{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.works img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:var(--bg2)}
+.works img:last-child:nth-child(3n+1){grid-column:2}
+.works img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;background:var(--bg2)}
 
 /* contacts */
 .contacts{display:grid;grid-template-columns:1fr;gap:18px}
@@ -188,22 +199,22 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
 
 
 <div class="nav"><div class="wrap">
-  <div class="brand">НА СЛАДКОЕ<i>.</i></div>
+  <a class="brand" href="#top" aria-label="На главную" onclick="window.scrollTo({top:0,behavior:'smooth'});return false"><img src="img/logo.png" alt="НА СЛАДКОЕ." style="height:40px;width:auto;display:block"></a>
   <div class="links">
     <button data-go="how">Как заказать</button>
     <button data-go="cakes">Начинки</button>
-    <button data-go="cups">Капкейки</button>
     <button data-go="decor">Декор</button>
+    <button data-go="cups">Капкейки</button>
     <button data-go="works">Работы</button>
   </div>
-  <button class="cta" data-go="contacts">Заказать</button>
+  <button class="cta" data-go="contacts">Контакты</button>
 </div></div>
 
 <div class="wrap">
 
 <header class="hero">
   <div>
-    <img class="logo" src="logo.png" alt="НА СЛАДКОЕ." width="636" height="399">
+    <img class="logo" src="img/logo.png" alt="НА СЛАДКОЕ." width="636" height="399">
     <h1 class="sub">Торты и капкейки<br>на заказ</h1>
     <span class="tag">Москва</span>
     <div class="btns">
@@ -212,8 +223,8 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
     </div>
   </div>
   <div class="stack">
-    <img src="w7.jpg" alt="Шоколадный торт с подтёками">
-    <img src="w4.jpg" alt="Жёлтый бенто-торт с рюшами">
+    <img src="img/w1.jpg" alt="Торт с Ferrari">
+    <img src="img/w10.jpg" alt="Новогодний торт с оленями">
     <div class="note">калории<br><u>не усваиваются</u></div>
   </div>
 </header>
@@ -224,11 +235,11 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
     <div class="step"><div class="n">1</div><span class="lbl">Начинка</span><p>Выбери: классика или премиум</p></div>
     <div class="step"><div class="n">2</div><span class="lbl">Размер</span><p>Определись с весом: примерно 150–200 г на человека</p></div>
     <div class="step"><div class="n">3</div><span class="lbl">Дизайн</span><p>Пришли референс или идею — придумаем вместе</p></div>
-    <div class="step"><div class="n">4</div><span class="lbl">Бронь</span><p>Внеси предоплату 50% — и дата за тобой</p></div>
+    <div class="step"><div class="n">4</div><span class="lbl">Бронь</span><p>Предоплата 50%</p></div>
   </div>
   <div class="facts">
     <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
-    <div class="fact"><span class="lbl">Предоплата</span><p>50% — и дата за тобой</p></div>
+    <div class="fact"><span class="lbl">Предоплата</span><p>50%</p></div>
     <div class="fact"><span class="lbl">Получение</span><p>самовывоз м. Варшавская или доставка</p></div>
   </div>
   <div class="sizes">
@@ -243,24 +254,31 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
     <div class="price"><b>2000 ₽</b>/ кг</div>
   </div>
   <div class="grid3">
-    <article class="card"><div class="ph"><img loading="lazy" src="rv.jpg" alt="Красный бархат в разрезе"></div><div class="tx"><h3>Красный бархат</h3><p>Бархатные коржи на кефире, крем-чиз с лимоном, вишнёвое компоте</p><div class="hand">бархатный сезон открыт</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="choc.jpg" alt="Шоколадный торт в разрезе"></div><div class="tx"><h3>Шоколадный</h3><p>Влажный шоколадный бисквит, шоколадный крем-чиз</p><div class="hand">шоколада много не бывает</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="snickers.jpg" alt="Торт Snickers в разрезе"></div><div class="tx"><h3>Snickers</h3><p>Шоколадный бисквит, крем-чиз с варёной сгущёнкой, солёная карамель с арахисом</p><div class="hand">орехи — это тоже белок</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="honey.jpg" alt="Медовик в разрезе"></div><div class="tx"><h3>Медовик</h3><p>Тонкие медовые коржи, нежный сметанный крем</p><div class="hand">как у бабушки, только лучше</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="lemon.jpg" alt="Лимонный торт в разрезе"></div><div class="tx"><h3>Лимонный</h3><p>Лимонные коржи, прослойка лимонного курда, крем-чиз с курдом</p><div class="hand">кисленький, но в хорошем смысле</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="berry.jpg" alt="Ягодный торт в разрезе"></div><div class="tx"><h3>Ягодный</h3><p>Ванильные коржи на кефире, ягодный крем-чиз, ягодное желе</p><div class="hand">клубника / малина / вишня</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/rv.jpg" alt="Красный бархат в разрезе"></div><div class="tx"><h3>Красный бархат</h3><p>Бархатные коржи на кефире, крем-чиз с лимоном, вишнёвое компоте</p><div class="hand">бархатный сезон открыт</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/choc.jpg" alt="Шоколадный торт в разрезе"></div><div class="tx"><h3>Шоколадный</h3><p>Влажный шоколадный бисквит, шоколадный крем-чиз</p><div class="hand">шоколада много не бывает</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/snickers.jpg" alt="Торт Snickers в разрезе"></div><div class="tx"><h3>Snickers</h3><p>Шоколадный бисквит, крем-чиз с варёной сгущёнкой, солёная карамель с арахисом</p><div class="hand">орехи — это тоже белок</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/honey.jpg" alt="Медовик в разрезе"></div><div class="tx"><h3>Медовик</h3><p>Тонкие медовые коржи, нежный сметанный крем</p><div class="hand">как у бабушки, только лучше</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/lemon.jpg" alt="Лимонный торт в разрезе"></div><div class="tx"><h3>Лимонный</h3><p>Лимонные коржи, прослойка лимонного курда, крем-чиз с курдом</p><div class="hand">кисленький, но в хорошем смысле</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/berry.jpg" alt="Ягодный торт в разрезе"></div><div class="tx"><h3>Ягодный</h3><p>Ванильные коржи на кефире, ягодный крем-чиз, ягодное желе</p><div class="hand">клубника / малина / вишня</div></div></article>
   </div>
 
   <div class="head sub2">
     <div><span class="eyebrow">когда хочется не просто торт</span><h2>Премиум</h2></div>
     <div class="price"><b>2600 ₽</b>/ кг</div>
   </div>
-  <div class="grid3">
-    <article class="card"><div class="ph"><img loading="lazy" src="pist.jpg" alt="Торт фисташка–малина в разрезе"></div><div class="tx"><h3>Фисташка–малина</h3><p>Лимонные коржи с малиной, малиновый компот, фисташковый крем-чиз</p><div class="hand">самая «дорогая» на вкус</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="kinder.jpg" alt="Торт киндер кантри в разрезе"></div><div class="tx"><h3>Киндер кантри</h3><p>Шоколадный бисквит, взбитый ганаш с хрустящей пшеницей, молочный шоколад</p><div class="hand">вкус из детства</div></div></article>
-    <article class="card"><div class="ph"><img loading="lazy" src="mousse.jpg" alt="Муссовый торт в разрезе"></div><div class="tx"><h3>Муссовый <span class="fix">3000 ₽</span></h3><p>Ягодный мусс, ягодная прослойка, лимонно-миндальный бисквит, зеркальная глазурь</p><div class="hand">клубника / малина / манго–маракуйя · ≈1,4 кг</div></div></article>
+  <div class="grid3 two">
+    <article class="card"><div class="ph"><img loading="lazy" src="img/pist.jpg" alt="Торт фисташка–малина в разрезе"></div><div class="tx"><h3>Фисташка–малина</h3><p>Лимонные коржи с малиной, малиновый компот, фисташковый крем-чиз</p><div class="hand">самая «дорогая» на вкус</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/nuts.jpg" alt="Ореховый торт в разрезе"></div><div class="tx"><h3>Ореховый</h3><p>Фундучный бисквит, крем-чиз, солёная карамель, карамельные орехи</p><div class="hand">карамель и орехи</div></div></article>
   </div>
-  <p class="allerg"><span class="lbl">Аллергены</span>во всех: глютен, яйца, молоко · Snickers: арахис · медовик: мёд · фисташка–малина и муссовый: фисташка, миндаль · киндер: соя</p>
+  <div class="head head2">
+    <div><span class="eyebrow">отдельный торт, не на вес</span><h2>Муссовый</h2></div>
+    <div class="price"><b>3000 ₽</b>/ торт<small>≈1,2 кг · единая цена за торт</small></div>
+  </div>
+  <div class="grid3 two">
+    <article class="card"><div class="ph"><img loading="lazy" src="img/mousse.jpg" alt="Клубничный муссовый торт в разрезе"></div><div class="tx"><h3>Муссовый клубничный</h3><p>Ягодный мусс, ягодная прослойка, лимонно-миндальный бисквит, зеркальная глазурь</p><div class="hand">можно сделать манго–маракуйя или малину за +500 ₽</div></div></article>
+    <article class="card"><div class="ph"><img loading="lazy" src="img/medmousse.jpg" alt="Муссовый медовик в разрезе"></div><div class="tx"><h3>Муссовый медовик</h3><p>Тонкие медовые коржи, сметанная вставка, медовый мусс, зеркальная глазурь</p><div class="hand">как медовик, только мусс</div></div></article>
+  </div>
+  <div class="allerg al"><div class="lbl">Аллергены</div><ul><li><b>Во всех</b> глютен, яйца, молоко</li><li><b>Snickers</b> арахис</li><li><b>Медовик</b> мёд</li><li><b>Фисташка–малина и муссовый ягодный</b> фисташка, миндаль</li><li><b>Ореховый</b> фундук</li></ul></div>
 
   <div class="calc" id="calc">
     <div>
@@ -299,27 +317,13 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
   </div>
 </section>
 
-<section id="cups">
-  <div class="head">
-    <div><span class="eyebrow">маленькие, но с начинкой</span><h2>Капкейки</h2></div>
-    <div class="prices">6 шт<b>1650 ₽</b><br>12 шт<b>2900 ₽</b></div>
-  </div>
-  <div class="grid2">
-    <article class="card cup"><div class="phs"><div><img loading="lazy" src="cup_car.jpg" alt="Карамельные капкейки"></div><div><img loading="lazy" src="cup_car_in.jpg" alt="Карамельный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Карамельные</h3><p>Карамельный бисквит, солёная карамель внутри, крем-чиз с карамелью</p><div class="hand">тройная карамель</div></div></article>
-    <article class="card cup"><div class="phs"><div><img loading="lazy" src="cup_ber.jpg" alt="Ягодный капкейк"></div><div><img loading="lazy" src="cup_ber_in.jpg" alt="Ягодный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Ягодные</h3><p>Ванильный бисквит, ягодная начинка внутри, ванильный крем-чиз</p><div class="hand">клубника / малина / вишня</div></div></article>
-    <article class="card cup"><div class="phs"><div><img loading="lazy" src="cup_lem.jpg" alt="Лимонные капкейки"></div><div><img loading="lazy" src="cup_lem_in.jpg" alt="Лимонный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Лимонные</h3><p>Лимонный бисквит, курд внутри, крем-чиз с лимонным курдом</p><div class="hand">кислинка в каждом укусе</div></div></article>
-    <article class="card cup"><div class="phs"><div><img loading="lazy" src="cup_rv.jpg" alt="Капкейки красный бархат"></div><div><img loading="lazy" src="cup_rv_in.jpg" alt="Капкейк красный бархат в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Красный бархат</h3><p>Бархатный бисквит, вишнёвый компот внутри, крем-чиз</p><div class="hand">с вишней</div></div></article>
-  </div>
-  <p class="allerg">Цена одна для всех вкусов.</p>
-</section>
-
 <section id="decor">
   <div class="head"><div><span class="eyebrow">любая идея станет тортом</span><h2>Декор</h2></div></div>
   <div class="dec">
-    <div class="drow"><img loading="lazy" src="dec1.jpg" alt="Торт с базовым декором"><div><div class="top"><h3>Базовый</h3><span class="pr">в цене</span></div><p>Ровное кремовое покрытие, цвет на выбор, мелкий кремовый декор или ягоды</p><div class="hand">уже включён в цену торта</div></div></div>
-    <div class="drow"><img loading="lazy" src="dec2.jpg" alt="Бенто-торт с рюшами"><div><div class="top"><h3>Средний</h3><span class="pr">+600 ₽</span></div><p>Кремовые рюши и бортики, бантики, жемчуг, ракушки, шоколадные элементы</p><div class="hand">когда нужен характер</div></div></div>
-    <div class="drow"><img loading="lazy" src="dec3.jpg" alt="Тематический торт"><div><div class="top"><h3>Сложный</h3><span class="pr">от +1400 ₽</span></div><p>Тематический торт по референсу: фигурки, топперы, много ручной работы</p><div class="hand">пришли идею — посчитаю точно</div></div></div>
-    <div class="drow"><img loading="lazy" src="dec4.jpg" alt="Сжигаемый торт"><div><div class="top"><h3>Сжигаемый торт</h3><span class="pr">+700 ₽</span></div><p>Верхняя картинка сгорает, а под ней — вторая надпись или фото</p><div class="hand">старое — в огонь</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec1.jpg" alt="Торт с базовым декором"><div><div class="top"><h3>Базовый</h3><span class="pr">в цене</span></div><p>Ровное кремовое покрытие, цвет на выбор, мелкий кремовый декор или ягоды</p><div class="hand">уже включён в цену торта</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec2.jpg" alt="Бенто-торт с рюшами"><div><div class="top"><h3>Средний</h3><span class="pr">+600 ₽</span></div><p>Кремовые рюши и бортики, бантики, жемчуг, ракушки, шоколадные элементы</p><div class="hand">когда нужен характер</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec4.jpg" alt="Сжигаемый торт"><div><div class="top"><h3>Сжигаемый торт</h3><span class="pr">+700 ₽</span></div><p>Верхняя картинка сгорает, а под ней — вторая надпись или фото</p><div class="hand">старое — в огонь</div></div></div>
+    <div class="drow"><img loading="lazy" src="img/dec3.jpg" alt="Тематический торт"><div><div class="top"><h3>Сложный</h3><span class="pr">от +1400 ₽</span></div><p>Тематический торт по референсу: фигурки, топперы, много ручной работы</p><div class="hand">пришли идею — посчитаю точно</div></div></div>
   </div>
   <div class="extra">
     <div><span class="lbl">Надпись</span><b>+300 ₽</b></div>
@@ -327,18 +331,32 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
   </div>
 </section>
 
+<section id="cups">
+  <div class="head">
+    <div><span class="eyebrow">маленькие, но с начинкой</span><h2>Капкейки</h2></div>
+    <div class="prices">6 шт<b>1650 ₽</b><br>12 шт<b>2900 ₽</b></div>
+  </div>
+  <div class="grid2">
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_car.jpg" alt="Карамельные капкейки"></div><div><img loading="lazy" src="img/cup_car_in.jpg" alt="Карамельный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Карамельные</h3><p>Карамельный бисквит, солёная карамель внутри, крем-чиз с карамелью</p><div class="hand">тройная карамель</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_ber.jpg" alt="Ягодный капкейк"></div><div><img loading="lazy" src="img/cup_ber_in.jpg" alt="Ягодный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Ягодные</h3><p>Ванильный бисквит, ягодная начинка внутри, ванильный крем-чиз</p><div class="hand">клубника / малина / вишня</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_lem.jpg" alt="Лимонные капкейки"></div><div><img loading="lazy" src="img/cup_lem_in.jpg" alt="Лимонный капкейк в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Лимонные</h3><p>Лимонный бисквит, курд внутри, крем-чиз с лимонным курдом</p><div class="hand">кислинка в каждом укусе</div></div></article>
+    <article class="card cup"><div class="phs"><div><img loading="lazy" src="img/cup_rv.jpg" alt="Капкейки красный бархат"></div><div><img loading="lazy" src="img/cup_rv_in.jpg" alt="Капкейк красный бархат в разрезе"><span>ВНУТРИ</span></div></div><div class="tx"><h3>Красный бархат</h3><p>Бархатный бисквит, вишнёвый компот внутри, крем-чиз</p><div class="hand">с вишней</div></div></article>
+  </div>
+  <p class="allerg">Цена одна для всех вкусов.</p>
+</section>
+
 <section id="works">
   <div class="head"><div><span class="eyebrow">следующий — твой</span><h2>Уже делали</h2></div></div>
   <div class="works">
-    <img loading="lazy" src="w1.jpg" alt="Торт Ferrari">
-    <img loading="lazy" src="w7.jpg" alt="Шоколадный торт с цифрой 48">
-    <img loading="lazy" src="w3.jpg" alt="Морской торт">
-    <img loading="lazy" src="w8.jpg" alt="Красный муссовый торт с зеркальной глазурью">
-    <img loading="lazy" src="w5.jpg" alt="Торт для бегуна">
-    <img loading="lazy" src="w9.jpg" alt="Красный бархат с малиной">
-    <img loading="lazy" src="w6.jpg" alt="Торт Наруто">
-    <img loading="lazy" src="w4.jpg" alt="Жёлтый бенто-торт">
-    <img loading="lazy" src="w2.jpg" alt="Розовый сжигаемый бенто-торт">
+    <img loading="lazy" src="img/w1.jpg" alt="Торт Ferrari">
+    <img loading="lazy" src="img/w7.jpg" alt="Шоколадный торт с цифрой 48">
+    <img loading="lazy" src="img/w3.jpg" alt="Морской торт">
+    <img loading="lazy" src="img/w8.jpg" alt="Красный муссовый торт с зеркальной глазурью">
+    <img loading="lazy" src="img/w5.jpg" alt="Торт для бегуна">
+    <img loading="lazy" src="img/w10.jpg" alt="Новогодний торт с мишками и оленями">
+    <img loading="lazy" src="img/w6.jpg" alt="Торт Наруто">
+    <img loading="lazy" src="img/w4.jpg" alt="Жёлтый бенто-торт">
+    <img loading="lazy" src="img/w2.jpg" alt="Розовый сжигаемый бенто-торт">
   </div>
 </section>
 
@@ -357,7 +375,7 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
   </div>
   <div class="facts">
     <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
-    <div class="fact"><span class="lbl">Предоплата</span><p>50% — и дата за тобой</p></div>
+    <div class="fact"><span class="lbl">Предоплата</span><p>50%</p></div>
     <div class="fact"><span class="lbl">Получение</span><p>самовывоз м. Варшавская или доставка</p></div>
   </div>
 </section>
