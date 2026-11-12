@@ -47,7 +47,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:56px 0 64px}
-.hero .logo{width:min(460px,100%)}
+.hero .logo{width:min(460px,100%);height:auto}
 .sub{font-family:var(--osw);font-weight:500;font-size:20px;letter-spacing:7px;color:#222;line-height:1.6;margin-top:28px;text-transform:uppercase}
 .tag{display:inline-block;background:var(--plaque);color:var(--plink);font-family:var(--osw);font-weight:600;letter-spacing:6px;text-transform:uppercase;padding:4px 12px;font-size:16px}
 .hero .tag{margin-top:10px}
@@ -166,6 +166,11 @@ footer .note{font-size:38px;display:inline-block;transform:rotate(-3deg)}
 footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
 
 @media (max-width:860px){
+  .nav .wrap{display:grid;grid-template-columns:1fr auto;align-items:center;height:auto;padding:8px 0 6px;gap:6px 10px}
+  .links{order:3;grid-column:1/-1;flex-wrap:wrap;overflow:visible;gap:0 4px;justify-content:flex-start}
+  .links button{font-size:11px;letter-spacing:1.2px;padding:6px 5px}
+}
+@media (max-width:860px){
   .hero{grid-template-columns:1fr;padding:36px 0 44px;gap:28px}
   .steps{grid-template-columns:1fr 1fr}
   .grid3{grid-template-columns:1fr 1fr}
@@ -193,6 +198,22 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
   .btn{padding:13px 20px;font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* lightbox */
+.works img{cursor:zoom-in;transition:transform .25s}
+.works img:hover{transform:scale(1.02)}
+.lb{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(17,14,12,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:0;transition:opacity .25s}
+.lb.open{display:flex}.lb.show{opacity:1}
+.lb figure{margin:0;max-width:min(92vw,720px);max-height:88vh;display:flex;flex-direction:column;align-items:center;gap:14px;touch-action:pan-y}
+.lb figure img{max-width:100%;max-height:78vh;width:auto;height:auto;object-fit:contain;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#f2e8df;animation:lbin .3s ease}
+@keyframes lbin{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
+.lb figcaption{font-family:var(--osw);font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#d9cfc6;text-align:center}
+.lb button{position:absolute;color:#fff;background:rgba(255,255,255,.12);border-radius:999px;width:48px;height:48px;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center}
+.lb button:hover{background:var(--pink)}
+.lb .x{top:max(16px,env(safe-area-inset-top));right:16px}
+.lb .pv{left:16px;top:50%;margin-top:-24px}.lb .nx{right:16px;top:50%;margin-top:-24px}
+@media (max-width:600px){.lb .pv,.lb .nx{top:auto;bottom:18px;margin:0}.lb .pv{left:calc(50% - 60px)}.lb .nx{right:calc(50% - 60px)}.lb figure img{max-height:72vh}}
+body.lbo{overflow:hidden}
 </style>
 </head>
 <body>
@@ -390,12 +411,13 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
 
 </div>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото"><button class="x" aria-label="Закрыть">&times;</button><button class="pv" aria-label="Назад">&#8249;</button><figure><img alt=""><figcaption></figcaption></figure><button class="nx" aria-label="Вперёд">&#8250;</button></div>
 <script>
 (function(){
   document.querySelectorAll('[data-go]').forEach(function(b){
     b.addEventListener('click',function(){
       var el=document.getElementById(b.dataset.go); if(!el) return;
-      var y=el.getBoundingClientRect().top+window.pageYOffset-56;
+      var y=el.getBoundingClientRect().top+window.pageYOffset-(document.querySelector(".nav").offsetHeight+4);
       window.scrollTo({top:y,behavior:'smooth'});
     });
   });
@@ -430,6 +452,20 @@ footer small{display:block;color:var(--mut);margin-top:12px;font-size:14px}
     try{navigator.clipboard.writeText('+79933506298').then(done,sel)}catch(e){sel()}
     function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Номер выделен'}
   });
+})();
+
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('.works img')); if(!imgs.length) return;
+  var lb=document.getElementById('lb'), pic=lb.querySelector('figure img'), cap=lb.querySelector('figcaption'), i=0, sx=null;
+  function show(n){ i=(n+imgs.length)%imgs.length; pic.style.animation='none'; void pic.offsetWidth; pic.style.animation=''; pic.src=imgs[i].currentSrc||imgs[i].src; pic.alt=imgs[i].alt; cap.textContent=imgs[i].alt+'  ·  '+(i+1)+' / '+imgs.length; }
+  function open(n){ show(n); lb.classList.add('open'); document.body.classList.add('lbo'); requestAnimationFrame(function(){lb.classList.add('show')}); }
+  function close(){ lb.classList.remove('show'); document.body.classList.remove('lbo'); setTimeout(function(){lb.classList.remove('open')},250); }
+  imgs.forEach(function(im,k){ im.tabIndex=0; im.setAttribute('role','button'); im.addEventListener('click',function(){open(k)}); im.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(k)} }); });
+  lb.querySelector('.x').onclick=close; lb.querySelector('.pv').onclick=function(){show(i-1)}; lb.querySelector('.nx').onclick=function(){show(i+1)};
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') show(i-1); else if(e.key==='ArrowRight') show(i+1); });
+  lb.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX },{passive:true});
+  lb.addEventListener('touchend',function(e){ if(sx===null) return; var d=e.changedTouches[0].clientX-sx; sx=null; if(Math.abs(d)>50) show(i+(d<0?1:-1)); });
 })();
 </script>
 
