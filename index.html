@@ -1,17 +1,5 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>НА СЛАДКОЕ.&nbsp;– торты и капкейки на заказ в Москве</title>
-<meta name="description" content="Домашние торты, бенто и капкейки на заказ в Москве. Классика от 2000 ₽/кг, премиум 2600 ₽/кг, капкейки от 1650 ₽. Самовывоз м. Варшавская или доставка. Заказ за 3 дня.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="НА СЛАДКОЕ.&nbsp;– торты и капкейки на заказ">
-<meta property="og:description" content="Торты, бенто и капкейки на заказ в Москве. Самовывоз м. Варшавская или доставка.">
-<meta property="og:image" content="og.jpg">
-<meta property="og:locale" content="ru_RU">
-<link rel="icon" href="favicon.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"НА СЛАДКОЕ.","description":"Торты, бенто и капкейки на заказ","telephone":"+79933506298","address":{"@type":"PostalAddress","addressLocality":"Москва","addressCountry":"RU"},"areaServed":"Москва","priceRange":"₽₽"}</script>
+<title>НА СЛАДКОЕ.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fira+Sans+Extra+Condensed:wght@900&family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -82,7 +70,7 @@ h3{font-family:var(--logo);font-weight:900;font-size:30px;line-height:.95;text-t
 .step .n{font-family:var(--logo);font-weight:900;font-size:52px;line-height:.9;color:var(--dot)}
 .step .lbl{display:block;margin:10px 0 6px}
 .step p{font-size:15px;color:var(--txt)}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
 .fact{background:var(--plaque);color:var(--plink);border-radius:14px;padding:16px 18px}
 .fact .lbl{color:var(--plink);display:block;margin-bottom:2px}
 .fact p{font-size:15px;font-weight:500}
@@ -218,7 +206,7 @@ body.lbo{overflow:hidden}
 .contacts{grid-template-columns:1.1fr 1fr;align-items:start}
 @media (max-width:860px){.contacts{grid-template-columns:1fr}}
 .cb h3{font-size:30px;margin:0 0 6px;line-height:1}
-.cb .sub2{font-size:14px;color:var(--mut);margin-bottom:14px}
+.cb .cbsub{font-size:14px;color:var(--mut);margin-bottom:14px}
 .cb label{display:block;margin-bottom:10px}
 .cb label span{display:block;font-family:var(--osw);font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
 .cb input[type=text],.cb input[type=tel]{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:2px solid var(--line);background:#fff;color:var(--ink)}
@@ -229,10 +217,39 @@ body.lbo{overflow:hidden}
 .cb .msg{margin-top:10px;font-size:14px;min-height:20px}
 .cb .msg.ok{color:#1c7a4a}.cb .msg.err{color:#b3261e}
 .cb small{display:block;margin-top:8px;font-size:12px;color:var(--mut)}
-</style>
-</head>
-<body>
 
+.promo{margin:0 -16px;background:var(--plaque);color:var(--plink);text-align:center;font-family:var(--osw);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:9px 16px;line-height:1.35}
+.promo b{font-weight:600;color:var(--ink)}
+.promo button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:var(--ink);text-decoration:underline;text-underline-offset:3px;padding:0 0 0 6px}
+.offer{display:flex;gap:16px;align-items:center;background:var(--ink);color:#fff;border-radius:20px;padding:22px 26px;margin-top:26px}
+.offer .pc{font-family:var(--logo);font-weight:900;font-size:64px;line-height:1;color:var(--dot);white-space:nowrap}
+.offer p{font-size:15px;line-height:1.45;color:#EDE4DC}.offer p b{color:#fff;font-weight:600}
+.sum .disc{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;color:#CFC6BE}
+.sum .disc b{display:block;font-family:var(--logo);font-weight:900;font-size:30px;line-height:1.1;color:var(--dot);font-variant-numeric:tabular-nums;white-space:nowrap}
+footer .legal{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;margin-top:22px}
+footer .legal button{font-size:13px;color:var(--mut);text-decoration:underline;text-underline-offset:3px;padding:2px 0}
+footer .legal button:hover{color:var(--ink)}
+footer .req{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.5}
+.ph{background:#FFE9A8;color:#5a4300;padding:0 4px;border-radius:3px;font-style:normal}
+.lg{position:fixed;inset:0;z-index:110;display:none;align-items:flex-start;justify-content:center;background:rgba(17,14,12,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);overflow:auto;padding:max(18px,env(safe-area-inset-top,0px)) 14px 28px}
+.lg.on{display:flex}
+.lg .doc{background:var(--card);border-radius:18px;max-width:760px;width:100%;padding:30px 28px 34px;position:relative;margin:auto 0}
+.lg .doc h2{font-family:var(--logo);font-weight:900;font-size:36px;line-height:1;text-transform:uppercase;color:var(--ink);padding-right:44px;margin-bottom:6px}
+.lg .doc .up{font-size:13px;color:var(--mut);margin-bottom:18px}
+.lg .doc h3{font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);margin:20px 0 6px}
+.lg .doc p,.lg .doc li{font-size:15px;line-height:1.6;color:var(--txt)}
+.lg .doc ul{padding-left:20px;margin:4px 0}.lg .doc li{margin:3px 0}
+.lg .doc .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:var(--bg2);font-size:24px;line-height:1;display:flex;align-items:center;justify-content:center}
+.lg .doc .x:hover{background:var(--plaque)}
+.cb .agree{display:flex;gap:10px;align-items:flex-start;margin-top:10px;font-size:13px;line-height:1.4;color:var(--mut)}
+.cb label.agree span{font-family:Inter,system-ui,sans-serif;font-size:13px;letter-spacing:0;text-transform:none;line-height:1.45;margin:0;display:inline}
+.cb .agree input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--pink)}
+.cb .agree button{text-decoration:underline;text-underline-offset:2px;color:var(--ink);font-size:inherit;padding:0}
+@media(max-width:860px){.offer{flex-direction:column;align-items:flex-start;gap:8px;padding:20px}.offer .pc{font-size:56px}.lg .doc{padding:26px 20px 30px}.lg .doc h2{font-size:30px}}
+</style>
+
+
+<div class="promo"><b>Скидка 20%</b> на заказ <button data-go="contacts">Забронировать</button></div>
 
 <div class="nav"><div class="wrap">
   <a class="brand" href="#top" aria-label="На главную" onclick="window.scrollTo({top:0,behavior:'smooth'});return false"><img src="logo.png" alt="НА СЛАДКОЕ." style="height:40px;width:auto;display:block"></a>
@@ -277,6 +294,7 @@ body.lbo{overflow:hidden}
   <div class="facts">
     <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
     <div class="fact"><span class="lbl">Предоплата</span><p>50%</p></div>
+    <div class="fact"><span class="lbl">Сейчас</span><p>скидка 20%</p></div>
     <div class="fact"><span class="lbl">Получение</span><p>самовывоз: м. Варшавская / м. Чертановская или доставка</p></div>
   </div>
   <div class="sizes">
@@ -333,7 +351,8 @@ body.lbo{overflow:hidden}
 </section>
 
 <section id="howmuch">
-  <div class="calc" id="calc" style="margin-top:0">
+  <div class="offer"><div class="pc">–20%</div><p><b>Сейчас действует скидка 20%.</b> Она считается на всю сумму заказа, включая декор. Напиши «хочу» в WhatsApp или Telegram, и я закреплю за тобой дату.</p></div>
+  <div class="calc" id="calc" style="margin-top:18px">
     <div>
       <h3>Сколько выйдет</h3>
       <div class="row"><span class="lbl">Начинка</span>
@@ -365,7 +384,8 @@ body.lbo{overflow:hidden}
       <div class="lbl">Примерно</div>
       <div class="big" id="cSum">4 000 ₽</div>
       <div class="hand" id="cPre">предоплата 2 000 ₽</div>
-      <small>Точную сумму назову после того, как обсудим дизайн.</small>
+      <div class="disc">со скидкой 20% <b id="cDisc">3 200 ₽</b></div>
+      <small>Точную сумму назову после того, как обсудим дизайн. Сейчас действует скидка 20%.</small>
     </div>
   </div>
 </section>
@@ -399,6 +419,12 @@ body.lbo{overflow:hidden}
   </div>
 </section>
 
+<section id="game">
+  <div class="head"><div><span class="eyebrow">для настроения</span><h2>Собери торт<br>как в заказе</h2></div></div>
+  <iframe id="igra" src="igra.html" title="Мини-игра: собери торт" loading="lazy" style="width:100%;height:760px;border:0;display:block;border-radius:22px"></iframe>
+</section>
+<script>window.addEventListener('message',function(e){if(e.data&&e.data.igraH){var f=document.getElementById('igra');if(f&&e.source===f.contentWindow)f.style.height=e.data.igraH+'px'}})</script>
+
 <section id="contacts">
   <div class="head"><div><span class="eyebrow">пиши&nbsp;– обсудим</span><h2>Ну что,<br>на сладкое?</h2></div></div>
   <div class="contacts">
@@ -413,18 +439,20 @@ body.lbo{overflow:hidden}
     </div>
     <form class="cc cb" id="cb" novalidate>
       <h3>Обратный звонок</h3>
-      <div class="sub2">Оставь имя и номер, перезвоню и всё обсудим</div>
+      <div class="cbsub">Оставь имя и номер, перезвоню и всё обсудим</div>
       <label><span>Имя</span><input type="text" name="name" autocomplete="given-name" maxlength="60" required></label>
       <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___-__-__" maxlength="20" required></label>
       <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="agree"><input type="checkbox" name="agree" required><span>Я согласен(на) на обработку имени и номера телефона по <button type="button" data-legal="privacy">Политике конфиденциальности</button> и принимаю <button type="button" data-legal="form">правила формы</button></span></label>
       <button class="btn" type="submit">Перезвоните мне</button>
       <div class="msg" id="cbMsg" role="status" aria-live="polite"></div>
-      <small>Нажимая кнопку, ты соглашаешься на обработку имени и номера для обратной связи.</small>
+      <small>Данные используются только для обратной связи по заказу.</small>
     </form>
   </div>
   <div class="facts">
     <div class="fact"><span class="lbl">Заказ</span><p>минимум за 3 дня</p></div>
     <div class="fact"><span class="lbl">Предоплата</span><p>50%</p></div>
+    <div class="fact"><span class="lbl">Сейчас</span><p>скидка 20%</p></div>
     <div class="fact"><span class="lbl">Получение</span><p>самовывоз: м. Варшавская / м. Чертановская или доставка</p></div>
   </div>
 </section>
@@ -432,11 +460,58 @@ body.lbo{overflow:hidden}
 <footer>
   <div class="note">калории не усваиваются*</div>
   <small>*но это не точно</small>
+  <div class="legal">
+    <button data-legal="privacy">Политика конфиденциальности</button>
+    <button data-legal="delivery">Доставка, оплата и возврат</button>
+    <button data-legal="form">Правила формы обратной связи</button>
+    <button data-legal="terms">Условия сайта</button>
+  </div>
+  <div class="req">Продавец: Чинякова А. Д., самозанятая, ИНН 301706558076 · Москва · na-sladkoe@mail.ru · +7 993 350-62-98</div>
 </footer>
 
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото"><button class="x" aria-label="Закрыть">&times;</button><button class="pv" aria-label="Назад">&#8249;</button><figure><img alt=""></figure><button class="nx" aria-label="Вперёд">&#8250;</button></div>
+<div class="lg" id="lg-privacy" role="dialog" aria-modal="true" aria-label="Политика конфиденциальности"><div class="doc"><button class="x" aria-label="Закрыть" data-close>&times;</button><h2>Политика конфиденциальности</h2><div class="up">Редакция от 18.11.2026</div>
+<p>Эта политика объясняет, какие данные собирает сайт na-sladkoe.ru и что с ними происходит. Оператор персональных данных: Чинякова А. Д., самозанятая, ИНН 301706558076 (далее «Продавец»), email na-sladkoe@mail.ru.</p>
+<h3>Какие данные мы собираем</h3>
+<ul><li>Имя и номер телефона, которые ты сама указываешь в форме «Обратный звонок».</li><li>Данные, которые ты присылаешь в WhatsApp, Telegram или по почте (имя, адрес доставки, пожелания по торту).</li></ul>
+<p>Сайт не использует cookies, рекламные и аналитические счётчики и не просит регистрироваться.</p>
+<h3>Зачем</h3>
+<p>Только чтобы перезвонить, обсудить и посчитать заказ, согласовать дату и доставку. Не используем данные для рассылок без отдельного согласия и не продаём третьим лицам.</p>
+<h3>Основание</h3>
+<p>Твоё согласие (галочка в форме) и необходимость исполнить заказ.</p>
+<h3>Кому передаются данные</h3>
+<ul><li>Сервис отправки форм FormSubmit передаёт заявку на почту Продавца (na-sladkoe@mail.ru, Mail.ru).</li><li>Сайт подгружает шрифты Google Fonts, поэтому твой IP-адрес может быть виден Google.</li><li>Курьерам: только имя, телефон и адрес, и только для доставки.</li></ul>
+<h3>Сколько хранятся</h3>
+<p>До завершения заказа и до 12 месяцев после него (для гарантийных вопросов), затем удаляем. Раньше, если ты отзовёшь согласие.</p>
+<h3>Твои права</h3>
+<p>Можно узнать, какие данные у нас есть, исправить их, потребовать удаления или отозвать согласие. Напиши на na-sladkoe@mail.ru, ответим в течение 10 рабочих дней.</p>
+<h3>Безопасность</h3>
+<p>Данные хранятся в личной почте и телефоне Продавца, доступ только у Продавца.</p></div></div>
+<div class="lg" id="lg-delivery" role="dialog" aria-modal="true" aria-label="Доставка, оплата и возврат"><div class="doc"><button class="x" aria-label="Закрыть" data-close>&times;</button><h2>Доставка, оплата и возврат</h2><div class="up">Редакция от 18.11.2026</div>
+<h3>Как сделать заказ</h3>
+<p>Напиши в WhatsApp или Telegram +7 993 350-62-98, оставь заявку в форме или позвони. Заказ принимается минимум за 3 дня до нужной даты. Если нужно срочнее, напиши, посмотрим по загрузке.</p>
+<h3>Оплата</h3>
+<ul><li>Предоплата 50% закрепляет дату и идёт на продукты. Оплата переводом на карту или по номеру телефона, реквизиты высылаю в чате.</li><li>Остаток оплачивается при получении торта.</li><li>Цена фиксируется после согласования начинки, веса и дизайна. Расчёт на сайте предварительный. Слово «от» означает, что точную сумму называю после обсуждения.</li></ul>
+<h3>Самовывоз</h3>
+<p>М. Варшавская или м. Чертановская, точное место и время согласуем в переписке.</p>
+<h3>Доставка</h3>
+<ul><li>По Москве, стоимость зависит от адреса и времени, называю до оплаты.</li><li>Интервал доставки согласуем заранее. Нужно, чтобы получатель был на связи.</li><li>Если получатель не вышел на связь и торт нельзя передать, заказ считается исполненным.</li></ul>
+<h3>Приёмка и хранение</h3>
+<p>Проверь торт при получении: внешний вид, надпись, вес. Претензии по внешнему виду принимаются сразу при передаче. После передачи хранение на тебе: холодильник +2…+6 °C, достать за 20–30 минут до подачи. Сроки хранения называю при выдаче.</p>
+<h3>Изменение и отмена заказа</h3>
+<ul><li>Менять дизайн и начинку можно не позже чем за 3 дня до даты. <i class="ph">уточнить</i></li><li>При отмене не позднее чем за 3 дня предоплата возвращается полностью. <i class="ph">уточнить</i></li><li>При отмене позже продукты уже куплены, поэтому предоплата не возвращается, но можно перенести дату или заменить заказ. <i class="ph">уточнить</i></li></ul>
+<h3>Если что-то не так</h3>
+<p>Торт изготавливается по индивидуальному заказу, поэтому не подлежит обмену и возврату надлежащего качества. Если есть недостаток (вкус, качество, не соответствует согласованному), напиши в день получения с фото, предложим решение: переделка, частичный или полный возврат.</p>
+<h3>Аллергены</h3>
+<p>Состав и аллергены уточняй до заказа: в тортах могут быть глютен, яйца, молоко, орехи, а производство не исключает следов других аллергенов.</p></div></div>
+<div class="lg" id="lg-form" role="dialog" aria-modal="true" aria-label="Правила формы обратной связи"><div class="doc"><button class="x" aria-label="Закрыть" data-close>&times;</button><h2>Правила формы обратной связи</h2><div class="up">Редакция от 18.11.2026</div>
+<p>Форма «Обратный звонок» на сайте нужна, чтобы попросить перезвонить.</p>
+<ul><li>Вводи свои настоящие имя и телефон. Не отправляй чужие данные без согласия владельца.</li><li>Отправляя форму, ты соглашаешься на обработку имени и телефона по <button type="button" data-legal="privacy" style="text-decoration:underline">Политике конфиденциальности</button>.</li><li>Форма не оформляет заказ и не является офертой. Заказ считается принятым после подтверждения в переписке и предоплаты.</li><li>Перезваниваю в течение рабочего дня, обычно с 10 до 21. Если не дозвонюсь, напишу в WhatsApp или Telegram.</li><li>Не отправляй рекламу, оскорбления и вредоносные данные. Такие заявки удаляются.</li><li>Если не хочешь использовать форму, просто напиши в WhatsApp или Telegram.</li></ul></div></div>
+<div class="lg" id="lg-terms" role="dialog" aria-modal="true" aria-label="Условия использования сайта"><div class="doc"><button class="x" aria-label="Закрыть" data-close>&times;</button><h2>Условия использования сайта</h2><div class="up">Редакция от 18.11.2026</div>
+<p>Сайт na-sladkoe.ru принадлежит Чинякова А. Д., самозанятая, ИНН 301706558076 (далее «Продавец») и содержит информацию о тортах и капкейках на заказ.</p>
+<ul><li>Информация на сайте, включая цены и калькулятор, носит справочный характер и не является публичной офертой (ст. 437 ГК РФ). Окончательные условия называю при подтверждении заказа.</li><li>Фотографии показывают примеры работ. Каждый торт делается вручную, поэтому внешний вид готового торта может отличаться от фото.</li><li>Скидка 20% действует в период акции и не суммируется с другими акциями. Продавец вправе завершить акцию в любой момент без предварительного уведомления.</li><li>Тексты и фотографии сайта защищены авторским правом, использование без согласия не допускается.</li><li>Связь: na-sladkoe@mail.ru, +7 993 350-62-98.</li></ul></div></div>
 <script>
 (function(){
   document.querySelectorAll('[data-go]').forEach(function(b){
@@ -469,6 +544,7 @@ body.lbo{overflow:hidden}
     var hard=document.querySelector('#cDec [data-v="1400"]').getAttribute('aria-pressed')==='true';
     document.getElementById('cSum').textContent=(hard?'от ':'')+fmt(total);
     document.getElementById('cPre').textContent='предоплата '+fmt(total/2);
+    document.getElementById('cDisc').textContent=(hard?'от ':'')+fmt(total*0.8);
   }
   calc();
   var cp=document.getElementById('copy');
@@ -495,7 +571,7 @@ body.lbo{overflow:hidden}
 
 (function(){
   var f=document.getElementById('cb'); if(!f) return;
-  var msg=document.getElementById('cbMsg'), btn=f.querySelector('button'), ph=f.phone;
+  var msg=document.getElementById('cbMsg'), btn=f.querySelector('button[type=submit]'), ph=f.phone;
   ph.addEventListener('input',function(){
     var d=ph.value.replace(/\D/g,''); if(d[0]==='8') d='7'+d.slice(1); if(d && d[0]!=='7') d='7'+d; d=d.slice(0,11);
     var o=''; if(d){ o='+7'; if(d.length>1) o+=' '+d.slice(1,4); if(d.length>4) o+=' '+d.slice(4,7); if(d.length>7) o+='-'+d.slice(7,9); if(d.length>9) o+='-'+d.slice(9,11); }
@@ -507,6 +583,7 @@ body.lbo{overflow:hidden}
     var name=f.name.value.trim(), digits=ph.value.replace(/\D/g,'');
     if(!name){ msg.className='msg err'; msg.textContent='Напиши, как тебя зовут'; f.name.focus(); return; }
     if(digits.length<11){ msg.className='msg err'; msg.textContent='Проверь номер телефона'; ph.focus(); return; }
+    if(!f.agree.checked){ msg.className='msg err'; msg.textContent='Нужно согласие на обработку данных'; f.agree.focus(); return; }
     btn.disabled=true; btn.textContent='Отправляю…';
     fetch('https://formsubmit.co/ajax/na-sladkoe@mail.ru',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({name:name,phone:ph.value,_subject:'Обратный звонок с сайта na-sladkoe.ru',_template:'table',_captcha:'false'})})
@@ -516,7 +593,16 @@ body.lbo{overflow:hidden}
     .then(function(){ btn.disabled=false; btn.textContent='Перезвоните мне'; });
   });
 })();
-</script>
 
-</body>
-</html>
+(function(){
+  var open=null;
+  function show(id){var el=document.getElementById('lg-'+id);if(!el)return;if(open)open.classList.remove('on');open=el;el.classList.add('on');document.body.style.overflow='hidden';el.scrollTop=0;try{history.replaceState(null,'','#'+id)}catch(e){}}
+  function hide(){if(!open)return;open.classList.remove('on');open=null;document.body.style.overflow='';try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-legal]');if(b){e.preventDefault();show(b.dataset.legal);return}
+    if(e.target.closest('[data-close]')||(open&&e.target===open))hide();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
+  var h=location.hash.replace('#','');if(['privacy','delivery','form','terms'].indexOf(h)>-1)show(h);
+})();
+</script>
